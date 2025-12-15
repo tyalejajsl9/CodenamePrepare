@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codenamoo - 새로운 시작</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                        mono: ['SF Mono', 'Consolas', 'Courier New', 'monospace'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#F9FAFB',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            400: '#9CA3AF',
+                            600: '#4B5563',
+                            900: '#111827',
+                        },
+                        'code-yellow': '#FACC15',
+                        'code-green': '#34D399',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            letter-spacing: -0.02em; 
+            background-color: #F9FAFB;
+        }
+        .full-center {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .code-block {
+            background-color: #1F2937;
+            color: #F9FAFB;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    
+</head>
+<body class="text-gray-900 antialiased">
+    
+    <div class="full-center px-6 py-16">
+        
+        <header class="absolute top-0 left-0 right-0 px-6 py-4">
+            <a href="#" class="text-xl font-bold tracking-tight text-gray-900">
+                codenam<span class="font-normal text-gray-400">øø</span>
+            </a>
+        </header>
+
+        <main class="max-w-2xl w-full mx-auto text-center">
+            
+            <div class="code-block font-mono text-left mb-10">
+                
+                <div class="flex gap-2 mb-4">
+                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-code-yellow rounded-full"></div>
+                    <div class="w-3 h-3 bg-code-green rounded-full"></div>
+                </div>
+
+                <pre class="whitespace-pre-wrap leading-relaxed">
+<span class="text-code-green">const</span> <span class="text-code-yellow">projectStatus</span> = <span class="text-white">'Preparing for Launch'</span>;
+<span class="text-code-green">const</span> <span class="text-code-yellow">launchDate</span> = <span class="text-white">'2025-12-25'</span>;
+
+<span class="text-code-yellow">if</span> (<span class="text-code-yellow">projectStatus</span> === <span class="text-white">'Ready'</span>) {
+  <span class="text-code-yellow">console</span>.<span class="text-code-green">log</span>(<span class="text-white">"// Codenamoo is now Live! Join us."</span>);
+} <span class="text-code-yellow">else</span> {
+  <span class="text-code-yellow">console</span>.<span class="code-warn">warn</span>(<span class="text-white">`// Initializing final assets...`</span>);
+  <span class="text-code-yellow">console</span>.<span class="code-warn">warn</span>(<span class="text-white">`// ETA: <span class="text-code-green">${launchDate}</span>`</span>);
+}
+                </pre>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tighter mb-4">
+                코드를 나누고, 지식을 연결합니다.
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto">개발자를 위한 새로운 커뮤니티 플랫폼 Codenamoo가<br /> 여러분을 만날 준비를 하고 있습니다.</p>
+
+            <div class="max-w-sm mx-auto">
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="오픈 알림을 받을 이메일 주소"
+                        id="email-input" 
+                        class="flex-1 px-4 py-4 border border-gray-200 rounded-lg focus:ring-black focus:border-black text-sm transition outline-none" />
+                    
+                    <button id="notify-button" class="px-5 py-4 bg-black text-white rounded-lg hover:bg-gray-700 transition w-full sm:w-auto shadow-md flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="mt-4 flex justify-center">
+                    <label class="flex items-center cursor-pointer">
+                        <input type="checkbox" id="privacy-agree" class="mr-2 w-4 h-4 text-black bg-gray-100 border-gray-300 rounded focus:ring-black">
+                        <span class="text-xs text-gray-600 text-left">
+                            [필수] 오픈 알림을 위한 <a href="#" class="underline font-medium hover:text-gray-900">개인정보 수집 및 이용</a>에 동의합니다.
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 mt-6">출시 즉시 가장 먼저 소식을 받아보세요.</p>
+        </main>
+
+        <footer class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-white/50 backdrop-blur-sm">
+            <p class="text-xs text-gray-400 font-mono text-center">© 2025 Sunkyo Park. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <div id="app-modal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center
+                opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="modal-content"
+            class="bg-white rounded-lg shadow-2xl w-full max-w-sm mx-4 p-6 transform translate-y-4 opacity-0 transition duration-300">
+            <div class="text-lg font-bold text-gray-900 mb-3" id="modal-title"></div>
+            <p class="text-sm text-gray-600 mb-6" id="modal-message"></p>
+            <div class="flex justify-end">
+                <button id="modal-close-btn"
+                        class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full
+                                hover:bg-gray-700 transition">
+                    확인
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="verification-modal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center
+                opacity-0 pointer-events-none transition-opacity duration-300 hidden">
+        <div id="verification-content"
+            class="bg-white rounded-lg shadow-2xl w-full max-w-sm mx-4 p-6 transform translate-y-4 opacity-0 transition duration-300 relative">
+            
+            <button id="verification-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <div class="text-xl font-bold text-gray-900 mb-2">📬 이메일 인증</div>
+            
+            <p class="text-sm text-gray-900 font-medium mb-1 truncate" id="target-email"></p>
+            <p class="text-xs text-gray-600 mb-4">
+                발송된 6자리 인증 코드를 입력하세요.
+            </p>
+            
+            <input type="text" id="verification-code-input" maxlength="6"
+                class="w-full text-center text-2xl font-mono tracking-widest p-3 mb-4
+                        border-2 border-gray-300 rounded-lg focus:ring-black focus:border-black transition outline-none"
+                placeholder="6자리 코드" />
+            
+            <div class="flex justify-between items-center mb-0">
+                <span id="timer-display" class="font-mono text-sm font-semibold text-gray-600">03:00</span>
+                <div class="flex gap-3">
+                    <button id="verification-resend-btn" 
+                            class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition">
+                        재전송
+                    </button>
+                    <button id="verification-submit-btn" 
+                            class="px-4 py-2 bg-black text-white text-sm font-medium rounded-full
+                                    hover:bg-gray-700 transition disabled:opacity-50"
+                            disabled>
+                        인증 확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("oeGWO-ElYAubu6J2i");
+        })();
+    </script>
+
+    <script src="modal.js"></script>
+    <script src="app.js" defer type="module"></script>
+</body>
+</html>
