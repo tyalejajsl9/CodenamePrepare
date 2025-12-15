@@ -44,6 +44,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            /* Footer 높이만큼 패딩 추가하여 Footer가 콘텐츠를 가리는 것을 방지 */
+            padding-bottom: 5rem; 
         }
         .code-block {
             background-color: #1F2937;
@@ -101,11 +103,12 @@
             </div>
 
         </main>
-
-        <footer class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-white/50 backdrop-blur-sm">
-            <p class="text-xs text-gray-400 font-mono text-center">© 2025 Sunkyo Park. All rights reserved.</p>
-        </footer>
+        
     </div>
+    
+    <footer class="fixed bottom-0 left-0 right-0 px-6 py-4 bg-white/80 backdrop-blur-sm z-50 w-full">
+        <p class="text-xs text-gray-400 font-mono text-center">© 2025 Sunkyo Park. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
